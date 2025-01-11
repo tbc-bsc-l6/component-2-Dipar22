@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AdminController;
+
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +16,7 @@ use App\Http\Controllers\AdminController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[HomeController::class,'index']);
 
 Route::middleware([
     'auth:sanctum',
@@ -30,3 +30,5 @@ Route::middleware([
 
 
 route::get('/home',[AdminController::class,'index']);
+route::get('/category_page',[AdminController::class,'category_page']);
+route::post('/add_category',[AdminController::class,'add_category']);
