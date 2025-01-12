@@ -16,6 +16,26 @@
         padding:30px;
         color:white;
     }
+    .center
+    {
+      margin: auto;
+      width: 50%;
+      text-align: center;
+      margin-top: 50px;
+      border: 1px solid white;
+
+    }
+    th
+    {
+      background-color: skyblue;
+      padding: 10px;
+
+    }
+    tr
+    {
+      border: 1px solid white;
+      padding: 10px;
+    }
     .logout
     {
         width: 300px;
@@ -43,7 +63,7 @@
                     <div class="alert alert-success">
                    
 
-                    <!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button> -->
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
                     {{session()->get('message')}}
                     </div>
                     
@@ -65,7 +85,21 @@
                 </form>
 
                 <div>
-                    <table>
+                    <table class="center">
+                      <tr>
+                        <th>Category Name</th>
+                        <th>Action</th>
+                      </tr>
+
+                      @foreach($data as $data)
+                      <tr>
+                        <td>{{$data->cat_title}}</td>
+                        <td>
+                          <a class="btn btn-info" href="{{url('edit_category',$data->id)}}">Update</a>
+                          <a class="btn btn-danger" href="{{url('cat_delete',$data->id)}}">Delete</a>
+                        </td>
+                      </tr>
+                      @endforeach
                         
 
 
