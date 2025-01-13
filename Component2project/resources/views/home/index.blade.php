@@ -4,6 +4,16 @@
   <head>
 
    @include('home.css')
+
+   <style type="text/css">
+    
+    .logout
+    {
+        width: 300px;
+        height: 30px;
+
+    }
+    </style>
   </head>
 
 <body>

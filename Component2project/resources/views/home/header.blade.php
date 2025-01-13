@@ -24,18 +24,18 @@
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="{{'/home'}}" class="active">Home</a></li>
                         <li><a href="explore.html">Explore</a></li>
                         <li><a href="details.html">Item Details</a></li>
                         <!-- <li><a href="author.html">Author</a></li> -->
                         <li><a href="create.html">Create Yours</a></li>
-            @if (Route::has('login'))
-                <!-- <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block"> -->
+                    @if (Route::has('login'))
+                    <!-- <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block"> -->
                     @auth
-                    <li>
+                    <div class="logout">
                         <x-app-layout>
                         </x-app-layout>
-                    </li>
+                        </div>
                     @else
                     <li><a href="{{ route('login') }}">Login</a></li>
 
@@ -43,8 +43,8 @@
                         <li><a href="{{ route('register') }}">Register</a></li>
                         @endif
                     @endauth
-                <!-- </div> -->
-            @endif
+                    <!-- </div> -->
+                    @endif
 
 
 
