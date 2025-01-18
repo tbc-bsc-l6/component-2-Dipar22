@@ -51,6 +51,10 @@ route::get('/approve_book/{id}',[AdminController::class,'approve_book']);
 route::get('/return_book/{id}',[AdminController::class,'return_book']);
 route::get('/reject_book/{id}',[AdminController::class,'reject_book']);
 route::get('/book_history',[HomeController::class,'book_history']);
+route::get('/explore',[HomeController::class,'explore']);
+route::get('/item_details',[HomeController::class,'item_details']);
+route::get('/search',[HomeController::class,'search']);
+route::get('/cat_search/{id}',[HomeController::class,'cat_search']);
 
 
 

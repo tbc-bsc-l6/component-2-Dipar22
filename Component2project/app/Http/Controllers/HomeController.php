@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Book;
 use App\Models\Borrow;
+use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 
@@ -70,5 +71,41 @@ class HomeController extends Controller
 
             return view('home.book_history',compact('data'));
         }
+    }
+
+    public function explore()
+    {
+        $category = Category::all();
+        $data = Book::all();
+        return view('home.explore',compact('data','category'));
+    }
+
+    public function item_details()
+    {
+        $data = Book::all();
+        return view('home.item_details',compact('data'));
+    }
+
+    public function search(Request $request)
+    {
+        $category = Category::all();
+        $search = $request->search;
+        $data = Book::where('title','LIKE','%'.$search.'%')
+                ->orWhere('author_name','LIKE','%'.$search.'%')->get();
+
+        return view('home.explore',compact('data','category'));
+
+
+
+    }
+
+    public function cat_search($id)
+    {
+        $category = Category::all();
+        $data = Book::where('category_id',$id)->get();
+
+
+        return view('home.explore',compact('data','category'));
+
     }
 }
