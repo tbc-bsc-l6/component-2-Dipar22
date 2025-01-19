@@ -23,7 +23,7 @@
 
     th
     {
-        background-color: skyblue;
+        background-color: plum;
         text-align: center;
         color: white;
         font-size: 20px;

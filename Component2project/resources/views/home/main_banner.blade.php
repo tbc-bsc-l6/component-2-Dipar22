@@ -9,7 +9,7 @@
             <p>we believe in the transformative power of knowledge and the joy of discovery. Whether you're here to explore timeless classics, stay current with the latest releases, or find a quiet space to learn and grow, our library is your gateway to endless possibilities.</p>
             <div class="buttons">
               <div class="border-button">
-                <a href="explore.html">Explore Top Books</a>
+                <a href="{{url('explore')}}">Explore Top Books</a>
               </div>
               <div class="main-button">
                 <a href="" target="_blank">Watch Our Videos</a>

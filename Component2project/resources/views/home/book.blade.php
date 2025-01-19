@@ -5,7 +5,7 @@
         <div class="col-lg-6">
           <div class="section-heading">
             <div class="line-dec"></div>
-            <h2><em>Items</em> Currently In The Market.</h2>
+            <h2><em>Available</em>  Books</h2>
           </div>
         </div>
 
@@ -46,7 +46,7 @@
                   </span>
                   <div class="line-dec"></div>
                   <span class="bid">
-                    Current Available<br><strong>{{$data->quantity}}</strong><br> 
+                      Available Quantity<br><strong>{{$data->quantity}}</strong><br> 
                   </span>
                   
                   <div class="text-button">

@@ -54,7 +54,7 @@
         <form action="{{url('search')}}" method="get">
           @csrf
 
-        <div class="row" style="margin: 30px; left: 100px; position: relative;">
+        <div class="row" style="margin: 30px; left: 120px;position:relative; ">
          
             <div class="col-md-8">
               <input class="form-control" type="search" name="search" placeholder="Search for book title,author name">

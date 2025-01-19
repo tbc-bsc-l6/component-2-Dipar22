@@ -30,7 +30,7 @@
         <div class="col-lg-12">
           <div class="section-heading">
             <div class="line-dec"></div>
-            <h2>View Details <em>For Item</em> Here.</h2>
+            <h2>Learn More About <em>This Item</em> .</h2>
           </div>
         </div>
         <div class="col-lg-7">

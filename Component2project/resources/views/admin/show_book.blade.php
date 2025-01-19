@@ -20,7 +20,7 @@
     }
     th
     {
-        background-color: skyblue;
+        background-color: plum;
         padding: 10px;
         font-size: 20px;
         font-weight:bold;
@@ -36,14 +36,14 @@
     } */
     .img_author
     {
-        width: 80px;
-        height: 60px;
+        width: 60px;
+        height: 40px;
         border-radius: 50%;
     }
     .img_book
     {
-        width:110px;
-        height: 150px;
+        width:80px;
+        height: 60px;
     }
     tr
     {
@@ -84,10 +84,12 @@
                     <th>Author Name</th>
                     <th>Price</th>
                     <th>Quantity</th>
+                    
                     <th>Description</th>
-                    <th>Category</th>
                     <th>Delete</th>
                     <th>Update</th>
+                    <th>Category</th>
+                    
                     <th>Author Image</th>
                     <th>Book Image</th>
                     
@@ -101,8 +103,8 @@
                     <td>{{$book->author_name}}</td>
                     <td>{{$book->price}}</td>
                     <td>{{$book->quantity}}</td>
+                    
                     <td>{{$book->description}}</td>
-                    <td>{{$book->category->cat_title}}</td>
                     <td >
                     <a class="btn btn-danger" href="{{url('b_delete',$book->id)}}">Delete</a>
                     
@@ -110,6 +112,8 @@
                     <td>
                     <a class="btn btn-info" href="{{url('edit_book',$book->id)}}">Update</a>
                     </td>
+                    <td>{{$book->category->cat_title}}</td>
+                   
                     
                     <td>
                         <img class="img_author" src="author/{{$book->author_img}}">

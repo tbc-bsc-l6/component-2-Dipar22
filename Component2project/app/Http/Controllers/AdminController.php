@@ -21,7 +21,11 @@ class AdminController extends Controller
 
             if($user_type == 'admin')
             {
-                return view('admin.index');
+                $client = User::all()->count();
+                $book = Book::all()->count();
+                $borrow = Borrow::where('status','approved')->count();
+                $return = Borrow::where('status','returned')->count();
+                return view('admin.index',compact('client','book','borrow','return'));
             }
 
             else if($user_type == 'user')
@@ -180,6 +184,10 @@ class AdminController extends Controller
         }
         else{
 
+            $data->status = 'approved';
+            $data->save();
+    
+
             $bookid = $data->book_id;
             $book = Book::find($bookid);
             $book_qty = $book->quantity - '1';
@@ -190,9 +198,7 @@ class AdminController extends Controller
             return redirect()->back();
 
         }
-        $data->status = 'approved';
-        $data->save();
-
+       
        
     }
 

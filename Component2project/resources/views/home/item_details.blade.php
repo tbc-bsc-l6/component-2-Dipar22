@@ -38,7 +38,7 @@
         
         <div class="col-lg-7">
           <div class="left-image">
-          <img src="book/{{$data->book_img}}" alt="" style="border-radius: 20px;height: 400px;width: 600px;margin-bottom: 20px; ">
+          <img src="book/{{$data->book_img}}" alt="" style="border-radius: 20px;height: 350px;width: 600px;margin-bottom: 20px; ">
           </div>
         </div>
         <div class="col-lg-5 align-self-center">

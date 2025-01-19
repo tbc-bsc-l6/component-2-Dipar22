@@ -27,7 +27,7 @@
     }
     th
     {
-      background-color: skyblue;
+      background-color: plum;
       padding: 10px;
 
     }
